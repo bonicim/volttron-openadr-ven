@@ -25,7 +25,12 @@ maintainers = ["Volttron Team <volttron@pnnl.gov>"]
 readme = "README.md"
 homepage = "https://github.com/VOLTTRON/volttron-openadr-ven"
 repository = "https://github.com/VOLTTRON/volttron-openadr-ven"
-packages = [ { include = "openadr_ven", from = "src" } ]
+
+packages = [
+    { include = "openadr_ven", from = "src" },
+    { include = "utils" },
+]
+
 keywords = ["volttron", "agent", "openadr", "application"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -59,6 +64,7 @@ sphinx-rtd-theme = "^1.0.0"
 
 [tool.poetry.scripts]
 volttron-openadr-ven = "openadr_ven.agent:main"
+vtn-demo = 'utils.vtn.__main__:main'
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/VOLTTRON/volttron-openadr-ven/issues"
